@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>사칙연산 계산기</title>
+</head>
+<body>
+	<form name="frmCalc" method="get" action="calculator" encType="UTF-8">
+		<h1>사칙연산 계산기</h1>
+		<input type='number' name='first' size=10>
+		<select name='operator'>
+		<option value='plus'>+</option>
+		<option value='minus'>-</option>
+		<option value='multi'>*</option>
+		<option value='div'>/</option>
+		</select>
+		<input type='number' name='second'>
+		
+		<input type='hidden' name='command' value='calculate'/>
+		<input type='submit' value='계산'/>
+
+	</form>
+
+</body>
+</html>

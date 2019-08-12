@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>제품번호 공급업체 입력창</title>
+<script type="text/javascript">
+	function fn_product(){
+		var searchproduct = document.searchproduct;
+		
+			searchproduct.method = "post";
+			searchproduct.action = "prod";
+			searchproduct.submit();
+		
+	}
+	</script>
+</head>
+<body>
+	<form name="searchproduct">
+	<h1>제품 조회</h1><br>
+		
+	제품번호 : <input type="text" name="prodId">
+	공급업체번호 : <input type="text" name="vendId">
+		
+	<input type="button" value="조회하기" onClick="fn_product()">
+	<input type="button" value="제품추가" onClick="location.href='addProduct.html'">
+	<input type="hidden" name="command" value="searchproduct">
+	</form>
+</body>
+</html>

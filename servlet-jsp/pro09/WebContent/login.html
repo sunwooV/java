@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원 가입 창</title>
+	<script type="text/javascript">
+	function fn_sendMember(){
+		var frmMember = document.frmMember;
+		var id = frmMember.user_id.value;
+		var pw = frmMember.user_pw.value;
+		if(id.length == 0 || id == ""){
+			alert("아이디는 필수입니다.");
+		} else if(pw.length == 0 || pw == ""){
+			alert("비밀번호는 필수입니다.");
+		} else{
+			frmMember.method = "post";
+			frmMember.action = "login7";
+			frmMember.submit();
+		}
+				
+	}
+	
+	</script>
+</head>
+<body>
+	<form name="frmMember">
+	<table>
+		<th>로그인 창</th>
+		<tr>
+			<td>아이디</td>
+			<td><input type="text" name="user_id"></td>
+		</tr>
+		<tr>
+			<td>비밀번호</td>
+			<td><input type="password" name="user_pw"></td>
+		</tr>
+
+	</table>
+	<input type="button" value="로그인" onClick="fn_sendMember()">
+	<input type="reset" value="다시 입력">
+	<input type="hidden" name="command" value="addMember">
+	<input type="hidden" name="user_address" value="서울시 성북구">
+	<input type="hidden" name="user_email" value="test@gmail.com">
+	<input type="hidden" name="user_hp" value="010-111-2222">
+	</form>
+
+</body>
+</html>
